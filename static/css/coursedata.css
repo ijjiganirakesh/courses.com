@@ -1,0 +1,164 @@
+body{
+    margin-left:20px;
+    margin-top: 40px;
+    background-image: linear-gradient(rgb(24, 97, 24),black),radial-gradient(white,lightgreen,lightblue);
+    float: left;
+    width: 100%;
+    height: 2500px;
+}
+
+#contain{
+    width: 350px;
+    height: 600px;
+    background-color:rgba(50, 47, 47, 0.989);
+    float: left;
+    margin-right: 20px;
+    
+}
+.container{
+    border-radius: 10px;
+  
+}
+#contain>img{
+    width: 100%;
+    height: 200px;
+}
+#contain>.head{
+    margin-left: 20px;
+    margin-right:10px;
+    color: white;
+    font-size: 25px;
+}
+.hed{
+    margin-left: 20px;
+    margin-right:10px;
+    font-size: 13px;
+    color:rgb(124, 124, 124);
+    
+   
+}
+#hr{
+    background-color: rgb(124,124,124);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.div1{
+    height: 100px;
+}
+
+.div2{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    margin-top: 50px;
+    color: white;
+}
+#h{
+    
+    font-size: 17px;
+    float: left;
+    padding-bottom: 10px;
+
+}
+#h::before{
+    content: "By ";
+    color: rgb(112, 110, 108);
+    font-size: 15px;
+    width: fit-content;
+
+    
+}
+#h1{
+    float: right;
+    width: fit-content;
+   
+    
+}
+#content{
+    width: 100%;
+    height: 200px;
+    position: relative;
+    background-color:rgba(50, 47, 47, 0.1);
+    
+    
+
+}
+#child>button{
+    width: 150px;
+    height: 50px;
+    color: white;
+    background-color:transparent;
+    border: none;
+    float: right;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#child>button:hover{
+    background-color: green;
+    cursor: pointer;
+}
+#child{
+    width: 100%;
+    float: right;
+    position:absolute;
+    
+}
+#child>h1{
+    color: white;
+    float: left;
+    font-family:none;
+    font-size: 30px;
+    margin-top: 0px;
+
+}
+#text{
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    margin-left: 350px;
+    font-family: ' monospace';
+    width: 600px;
+    padding:0px 100px;
+    font-weight: 400;
+    margin-bottom: 0px;
+}
+#checkcourse{
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+#checkcourse button{
+    width: 400px;
+     height: 50px; 
+     color: white;
+     background-color: rgb(17, 89, 17);
+     font-size: 20px;
+     border-radius: 10px;
+     margin-bottom: 30px;
+    cursor: pointer;
+}
+#checkcourse button:hover{
+    background-color: green;
+}
+#rating{
+    width: 100%;
+    height: 150px;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 200px;
+    /* background-color: aqua; */
+}
+#rating>h1{
+    font-size: 30px;
+    float: left;
+    color:white;
+    margin-left: 250px;  
+}
+#con{
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    width: 600px;
+    height: 100px;
+    padding-left: 30%;
+}

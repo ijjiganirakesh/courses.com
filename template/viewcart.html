@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,tr,td,th{
+            border: 2px solid black;
+            border-collapse: collapse;
+        }
+        td,tr{
+            width:200px;
+            height:60px;
+            text-align: center;
+            font-size: 25px;
+            background-color:rgb(189, 188, 188);
+        }
+        td:hover{
+            background-color: rgb(165, 163, 163);
+        }
+        th{
+            width:150px;
+        
+            color: white;
+            background-color: blue;
+        }
+        #cname{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+        <th>ITEM</th>
+        <th>ITEMNAME</th>
+        <th>ITEM PRICE</th>
+        <th>NO.OF.ITEMS</th>
+        <!-- <th>Ammount</th> -->
+        <th>CHANGE_ITEMS</th>
+        <th>ACTION</th></tr>
+        
+    </tr>
+        {% for i in data %}
+        <tr>
+            <td><img src="{{ i.Courses.image.url  }}" alt="image" width="100" height="100"></td>
+
+            <td id="cname">{{i.Courses.coursename}}</td>
+            <td>{{i.Courses.price}}</td>
+            <td>{{i.quantity}}</td>
+
+            <!-- <td>{{i.Courses.price}}*{{i.quantity}}</td> -->
+        
+            <td><button style="margin-left: 10px;"><a href="{% url 'removecart' i.id %}" style="text-decoration: none;font-size: 30px;">-</a></button><button style="margin-left:10px;margin-right:10px; font-size: 30px;">{{i.quantity}}</button><button><a href="{% url 'addcart' i.Courses.id %}" style="text-decoration: none;font-size: 30px;">+</a></button></td>
+            <td><button><a href="{% url 'delcart' i.id %}">Delete</a></button> </td>
+            
+        </tr>
+        {% endfor %}
+    
+       
+    </table>
+    <h1>THE TOTAL PRICE = {{total}}</h1>
+    <a href="{% url 'course' %}">Back</a>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #search_details{
+            width: 300px;
+            height: 300px;
+            background-color: rgb(237, 244, 250);
+            float: left;
+            margin-left: 30px;
+            text-align: center;
+        }
+        img{
+            width: 300px;
+            height: 100px;
+           
+        }
+    </style>
+</head>
+<body style="background-color: gainsboro;">
+    {% for i in courses %}
+    <div id="search_details">
+    <img src=" {{ i.image.url }}" alt="">  
+    <h3>{{ i.coursename }}</h3>
+    <p>{{i.description}}</p>
+    <h2>{{i.price}}</h2>
+    </div>
+    {% endfor %}
+</body>
+</html>

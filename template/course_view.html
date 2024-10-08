@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/course_view.css' %}">
+    <style>
+        body{
+            margin: 0px;
+        }
+        img{
+           width: 100%;
+           height: 200px;
+        }
+        #add{
+            background-color: green;
+            color:white;
+            width:50px;
+            height: 50px;
+            font-size: 20px;
+        }
+        #search{
+            width: 400px;
+            height: 30px;
+            /* border-radius: 20px; */
+            margin-left: 40px;
+            margin-top: 30px;
+            padding-left: 20px;
+            border: none;
+            /* margin-left: 300px; */
+        }
+        #search_btn{
+            width: 75px;
+            height: 30px;
+            margin-left: 5px;
+        }
+        button>a{
+            margin-top: -25px;
+            margin-bottom: 10px;
+            padding-top: -20px;
+        
+            
+        }
+        #child>button{
+    
+            margin-top: -40px;
+        }
+        #profile{
+            width: 70px;
+            height: 70px;
+            float: right;
+            background-color: red;
+            border-radius: 50%;
+            margin-top: -35px;
+        }
+        #profile>img{
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <div id="child">
+        <!-- <h1>Learn What You Want</h1> -->
+        <form action="{% url 'search' %}" role="search" style="margin: 0px;padding: 0px;">
+            <input type="search" name="q" id="search" placeholder="search" style="margin-bottom: 10px;"><button type="submit" id="search_btn">search</button>
+        </form>
+        <div id='profile'>{{user}}</div>
+        <button><a href="{% url 'logout' %}">Logout</a></button>
+        <button><a href="{% url 'profile'  %}">Profile</a></button>
+        <button><a href="{% url 'viewcart' %}">Cart</a></button>
+        <button>Course</button>
+        <button><a href="{% url 'getdata'  %}">Home</a></button>
+        </div>
+        
+    </div>
+    <!-- <a href="{% url 'coursedata' %}" >Show_Cart_Items</a> -->
+       {% for i in data %}
+       <a href="#">
+       <div id="contain" class="container">
+        <img src="{{ i.image.url }}" alt="" class="container">
+        <h1 class="head" style="width: 100%;;">{{ i.coursename }}</h1>
+        <h1 class="hed">{{ i.description }}</h1>
+        <br>
+        <hr>
+        <div class="div1" style="height: 50px;"></div>
+        <div class="div2"><h3 id="h">{{i.auther}}</h3><h3 id="h1">{{i.price}}</h3>
+        </div>
+        <a href="{% url 'addcart' i.id %}" id="add">Add To Cart</a>
+        </div>
+    
+       </a>
+        <!-- <button>Add To Cart</button> -->
+        {% endfor %}
+    
+ 
+</body>
+</html>

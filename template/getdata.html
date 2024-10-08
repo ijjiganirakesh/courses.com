@@ -1,0 +1,69 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/coursedata.css' %}">
+    <style>
+        #search{
+            width: 400px;
+            height: 30px;
+            border-radius: 20px;
+            margin-left: 40px;
+            margin-top: 10px;
+            padding-left: 20px;
+            border: none;
+            /* margin-left: 300px; */
+        }
+    </style>
+   
+</head>
+<body style="height: 2400px;width: 100%;background-image: linear-gradient(rgb(35, 30, 30),gray);position: static;">
+    <div id="content" style="height: 50px;">
+        <div id="child" >
+        <h1>Learn What You Want</h1> <input type="search" name="" id="search"  placeholder="search">
+        
+        <button><a href="{% url 'login' %}" style="color: white;text-decoration: none;">Login</a></button>
+        <button><a href="{% url 'register' %}" style="color: white;text-decoration: none;">Registration</a></button>
+        <button>Contact</button>
+        <button><a href="{% url 'course' %}" style="color: white;text-decoration: none;">Courses</a></button>
+        <button>Home</button>
+        </div>
+    </div>
+    <!-- <input type="search" name="" id="search" > -->
+    
+        <div id="text" >
+            
+            <h2 id="text_content">We only teach what we are really <i>good</i> at.</h2>
+        </div>
+        <div id="checkcourse" style="text-align: center;"><a href="{% url 'course' %}"><button type="button">check courses make an impact</button></a></div>
+        <div id="rating" style="text-align: center;"><h1>24k+<br>student tought
+
+        </h1><h1>9+<br> instructors</h1><h1>320k+ <br>youtube short</h1></div>
+        <div id="con">
+            we do whatever it takes to help you understand the concepts
+        </div>
+        <br><br>
+    <div style="width: 100%;height: 600px;">
+       {% for i in data %}
+       <a href="#">
+       <div id="contain" class="container" style="margin-left: 5px;">
+        <img src="{{ i.image.url }}" alt="" class="container">
+        <h1 class="head">{{ i.coursename }}</h1>
+        <h1 class="hed">{{ i.description }}</h1>
+        <br>
+        <hr id="hr">
+        <div class="div1"></div>
+        <div class="div2"><h3 id="h">{{i.auther}}</h3><h3 id="h1">₹{{i.price}}</h3></div>
+        </div>
+       </a>
+        {% endfor %}
+    </div>
+    <br>
+    <hr>
+    <div style="width: 100%;height:400px ;"></div>
+    <hr>
+</body>
+</html>

@@ -1,0 +1,110 @@
+body{
+    margin-left: 30px;
+    margin-top: 40px;
+    background-image: linear-gradient(rgb(0, 18, 0),black);
+    float: left;
+    width: 100%;
+    height: 2000px;
+}
+
+#contain{
+    width: 350px;
+    height: 600px;
+    background-color:rgba(50, 47, 47, 0.989);
+    float: left;
+    margin-right: 20px;
+    
+}
+.container{
+    border-radius: 10px;
+  
+}
+#contain>img{
+    width: 100%;
+    height: 200px;
+}
+#contain>.head{
+    margin-left: 20px;
+    margin-right:10px;
+    color: white;
+    font-size: 25px;
+}
+.hed{
+    margin-left: 20px;
+    margin-right:10px;
+    font-size: 13px;
+    color:rgb(124, 124, 124);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+}
+hr{
+    background-color: rgb(124,124,124);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.div1{
+    height: 100px;
+}
+
+.div2{
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    margin-top: 50px;
+    color: white;
+}
+#h{
+    
+    font-size: 17px;
+    float: left;
+    padding-bottom: 10px;
+
+}
+#h::before{
+    content: "By ";
+    color: rgb(112, 110, 108);
+    font-size: 15px;
+    width: fit-content;
+
+    
+}
+#h1{
+    float: right;
+    width: fit-content;
+   
+    
+}
+#content{
+    width: 100%;
+    height: 300px;
+
+}
+#child>button{
+    width: 150px;
+    height: 50px;
+    color: white;
+    background-color:transparent;
+    border: none;
+    float: right;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+#child{
+    width: 100%;
+    float: right;
+    position:absolute;
+    
+}
+#child>h1{
+    color: white;
+    float: left;
+    font-family: Brush Script MT;
+    font-size: 40px;
+    
+    width: fit-content;
+}
+a{
+    color: white;
+    text-decoration: none;
+    margin-top: -10px;
+}
